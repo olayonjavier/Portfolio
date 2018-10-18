@@ -7,12 +7,11 @@
 .navbar-toggler{ background:#fff !important;}
 
 .header{
-    background-image: url('https://images.pexels.com/photos/1246078/pexels-photo-1246078.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+    background-image: url('https://c2.staticflickr.com/4/3539/3452602862_a86a35a34c_o.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-}
-
+   }
 .overlay{
     position: absolute;
     min-height: 100%;
@@ -44,4 +43,42 @@
     border: 1px solid #F97300;
     background: #F97300;
     color: #fff;
+}
+
+.about{
+    margin: 4em 0;
+    padding: 1em;
+    position: relative;
+}
+
+.about h1{
+    color: #F97300;
+    margin: 2em;
+}
+
+.about img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.about span{
+    display: block;
+    color: #888;
+    position: absolute;
+    left: 115px;
+}
+
+.about .desc{
+    padding: 2em;
+    border-left: 4px solid #10828c;
+}
+
+.about .desc h3{
+    color: #10828c;
+}
+
+.about .desc p{
+    line-height: 2;
+    color: #888;
 }
