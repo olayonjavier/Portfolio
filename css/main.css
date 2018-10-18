@@ -11,17 +11,21 @@ html, h1, h2, h3, h4, h5, h6, a{
 }
 
 /*Nav bar*/
-.navbar{ background: #F97300;}
-.nav-link , .navbar-brand{ color: #f4f4f4; cursor: pointer;}
+.navbar{ 
+    background:  #1B242F;
+    border-bottom: 3px solid transparent;
+    border-bottom-color: #04C2C9;
+}
+.nav-link { color: #f4f4f4; cursor: pointer;}
 .nav-link{ margin-right: 1em !important;}
-.nav-link:hover{ background: #f4f4f4; color: #f97300;}
+.nav-link:hover{  color:  #E31B6D;}
 .navbar-collapse{ justify-content: flex-end;}
 .navbar-toggler{ background:#fff !important;}
 
 /*Header*/
 .header{
     position: relative;
-    background-image: url('/Images/sunset_grass.jpg');
+    background-image: url('../Images/abandoned-architecture-building-1246078.jpg');
     
     background-size: cover;
     background-position: center;
@@ -41,7 +45,7 @@ html, h1, h2, h3, h4, h5, h6, a{
     padding: 2em;
 }
 .description h1{
-    color: #F97300;
+    color:  #444649;
 }
 .description p{
     color: #666;
@@ -50,8 +54,8 @@ html, h1, h2, h3, h4, h5, h6, a{
     line-height: 1.5;
 }
 .description button{
-    border: 1px solid #F97300;
-    background: #F97300;
+    border: 1px solid  #fff;
+    background:  #1B242F;
     color: #fff;
 }
 
@@ -62,7 +66,7 @@ html, h1, h2, h3, h4, h5, h6, a{
     position: relative;
 }
 .about h1{
-    color: #F97300;
+    color:  #444649;
     margin: 2em;
 }
 .about img{
@@ -78,10 +82,10 @@ html, h1, h2, h3, h4, h5, h6, a{
 }
 .about .desc{
     padding: 2em;
-    border-left: 4px solid #10828c;
+    border-left: 4px solid #04C2C9;
 }
 .about .desc h3{
-    color: #10828c;
+    color: #E31B6D;
 }
 .about .desc p{
     line-height: 2;
@@ -89,15 +93,15 @@ html, h1, h2, h3, h4, h5, h6, a{
 }
 
 /*Projects*/
-.portfolio{
+.projects{
     margin: 4em 0;
     position: relative;
 }
-.portfolio h1{
-    color: #F97300;
+.projects h1{
+    color:  #444649;
     margin: 2em;
 }
-.portfolio img{
+.projects img{
     height: 15rem;
     width: 100%;
     margin: 1em;
@@ -110,13 +114,13 @@ html, h1, h2, h3, h4, h5, h6, a{
 }
 .contact-form h1{
     padding: 2em 1px;
-    color: #F97300;
+    color:  #444649;
 }
 .contact-form .right{
     max-width: 600px;
 }
 .contact-form .right .btn-secondary{
-    background: #F97300;
+    background:  #1B242F;
     color: #fff;
     border: 0;
 }
