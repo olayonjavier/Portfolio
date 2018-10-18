@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+body{
+    padding: 0;
+    margin: 0;
+    background: #f4f4f4;
+}
+
 html, h1, h2, h3, h4, h5, h6, a{
     font-family: "Raleway";
 }
@@ -14,8 +20,9 @@ html, h1, h2, h3, h4, h5, h6, a{
 
 /*Header*/
 .header{
-    background-image: url('https://c2.staticflickr.com/4/3539/3452602862_a86a35a34c_o.jpg');
-    background-attachment: fixed;
+    position: relative;
+    background-image: url('/Images/sunset_grass.jpg');
+    
     background-size: cover;
     background-position: center;
    }
@@ -29,7 +36,7 @@ html, h1, h2, h3, h4, h5, h6, a{
 }
 .description{
     position: absolute;
-    top: 30;
+    top: 30%;
     margin: auto;
     padding: 2em;
 }
