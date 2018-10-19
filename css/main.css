@@ -45,7 +45,7 @@ html, h1, h2, h3, h4, h5, h6, a{
     padding: 2em;
 }
 .description h1{
-    color:  #444649;
+    color:  #E31B6D;
 }
 .description p{
     color: #666;
@@ -78,7 +78,7 @@ html, h1, h2, h3, h4, h5, h6, a{
     display: block;
     color: #888;
     position: absolute;
-    left: 115px;
+    left: 155px;
 }
 .about .desc{
     padding: 2em;
