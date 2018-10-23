@@ -7,4 +7,17 @@ $(document).ready(function(){
             scrollTop:$("#" + $(this).data('value')).offset().top
         }, 1000)
     })
+
+    $(".navbar").hide();
+
+    $(function(){
+        $(window).scroll(function(){
+            if($(this).scrollTop() > $(window).height()){
+                $('.navbar').fadeIn();
+            }
+            else{
+                $('.navbar').fadeOut();
+            }
+        })
+    })
 })

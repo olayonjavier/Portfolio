@@ -10,6 +10,13 @@ html, h1, h2, h3, h4, h5, h6, a{
     font-family: "Raleway";
 }
 
+hr{
+    border: none;
+    width: 70px;
+    height: 4px;
+    background-color: #444649;
+}
+
 /*Nav bar*/
 .navbar{ 
     background:  #1B242F;
