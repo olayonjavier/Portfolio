@@ -21,3 +21,26 @@ $(document).ready(function(){
         })
     })
 })
+
+var canvas = document.querySelector('canvas');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+var context = canvas.getContext('2d');
+
+var x = 200;
+var y= 200;
+
+var dx = 1;
+function animate(){
+    requestAnimationFrame(animate);
+    context.clearRect(0, 0, innerWidth, innerHeight);
+
+    context.beginPath();
+    context.arc(x, y, 30, 0, Math.PI * 2, false);
+    context.stroke();
+
+    x += dx;
+}
+
+animate();
