@@ -31,7 +31,7 @@ var context = canvas.getContext('2d');
 var x = 200;
 var y= 200;
 
-var dx = 1;
+var dx = 10;
 function animate(){
     requestAnimationFrame(animate);
     context.clearRect(0, 0, innerWidth, innerHeight);
@@ -40,6 +40,9 @@ function animate(){
     context.arc(x, y, 30, 0, Math.PI * 2, false);
     context.stroke();
 
+    if(x + 30 > innerWidth || x - 30 < 0){
+        dx = -dx;
+    }
     x += dx;
 }
 
