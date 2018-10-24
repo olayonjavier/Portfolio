@@ -26,24 +26,73 @@ var canvas = document.querySelector('canvas');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-var context = canvas.getContext('2d');
+const colors = [
+    'pink',
+    'purple',
+    'red'
+]
 
-var x = 200;
-var y= 200;
 
-var dx = 10;
-function animate(){
-    requestAnimationFrame(animate);
-    context.clearRect(0, 0, innerWidth, innerHeight);
+var c = canvas.getContext('2d');
 
-    context.beginPath();
-    context.arc(x, y, 30, 0, Math.PI * 2, false);
-    context.stroke();
-
-    if(x + 30 > innerWidth || x - 30 < 0){
-        dx = -dx;
-    }
-    x += dx;
+function randomIntFromRange(min, max){
+    return Math.floor(Math.random() * ( max - min +1) + min);
 }
 
+function randomColor(colors){
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+function Particle(x, y, radius, color){
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
+    this.color = color;
+    this.radians = Math.random() * Math.PI * 2;
+    this.velocity = 0.05;
+    this.distanceFromCenter = randomIntFromRange(50, 125);
+
+    this.update = () => {
+        const lastPoint = {x: this.x, y: this.y};
+        
+        this.radians += this.velocity;
+        this.x = x + Math.cos(this.radians) * this.distanceFromCenter;
+        this.y = y + Math.sin(this.radians) * this.distanceFromCenter;
+        this.draw(lastPoint);
+    }
+
+    this.draw = lastPoint => {
+        c.beginPath();
+        c.strokeStyle = this.color;
+        c.lineWidth = this.radius;
+        c.moveTo(lastPoint.x, lastPoint.y);
+        c.lineTo(this.x, this.y);
+        c.stroke();
+        c.closePath();
+    }
+}
+
+
+let particles;
+function init(){
+    particles = [];
+    
+    for(let i = 0; i < 100; i++){
+        const radius = (Math.random() * 2) + 1;
+        particles.push(new Particle(canvas.width /2, canvas.height / 2, radius, randomColor(colors)));
+    }
+}
+
+
+function animate(){
+    requestAnimationFrame(animate);
+    c.fillStyle = 'rgba(255, 255, 255, 0.05)';
+    c.fillRect(0, 0, innerWidth, innerHeight);
+
+    particles.forEach(particle => {
+        particle.update();
+    })    
+}
+
+init();
 animate();
