@@ -59,6 +59,7 @@ function Particle(x, y, radius, color){
         this.x = x + Math.cos(this.radians) * this.distanceFromCenter;
         this.y = y + Math.sin(this.radians) * this.distanceFromCenter;
         this.draw(lastPoint);
+        text();
     }
 
     this.draw = lastPoint => {
@@ -92,6 +93,13 @@ function animate(){
     particles.forEach(particle => {
         particle.update();
     })    
+}
+
+function text(){
+    c.font = "30px";
+    c.fillStyle = "pink";
+    c.textAlign = "center";
+    c.fillText("Javier Olayon", canvas.width / 2, canvas.height / 2);
 }
 
 init();
