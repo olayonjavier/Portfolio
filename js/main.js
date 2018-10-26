@@ -50,7 +50,7 @@ function Particle(x, y, radius, color){
     this.color = color;
     this.radians = Math.random() * Math.PI * 2;
     this.velocity = 0.05;
-    this.distanceFromCenter = randomIntFromRange(50, 125);
+    this.distanceFromCenter = randomIntFromRange(125, 200);
 
     this.update = () => {
         const lastPoint = {x: this.x, y: this.y};
@@ -96,7 +96,7 @@ function animate(){
 }
 
 function text(){
-    c.font = "30px";
+    c.font = "25pt Raleway";
     c.fillStyle = "pink";
     c.textAlign = "center";
     c.fillText("Javier Olayon", canvas.width / 2, canvas.height / 2);
