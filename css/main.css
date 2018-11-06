@@ -114,6 +114,19 @@ canvas{
     color:  #444649;
     margin: 2em;
 }
+
+.projects h3{
+    text-align: center;
+    margin: 1em;
+    text-decoration: underline;
+    color: #000;
+}
+
+.projects p{
+    text-align: center;
+    margin: 1em;
+    color: #000;
+}
 .projects img{
     height: 15rem;
     width: 100%;
