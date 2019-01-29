@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('.header').height($(window).height());
-
+    
 
     $(".navbar a").click(function(){
         $("body,html").animate({
@@ -21,6 +21,9 @@ $(document).ready(function(){
         })
     })
 })
+
+
+//$('.canvas-button').top(canvas.height/2);
 
 var canvas = document.querySelector('canvas');
 canvas.width = window.innerWidth;
@@ -87,7 +90,7 @@ function init(){
 
 function animate(){
     requestAnimationFrame(animate);
-    c.fillStyle = 'rgba(255, 255, 255, 0.05)';
+    c.fillStyle = 'rgba(37, 41, 52, 0.05)'; // = #252934 
     c.fillRect(0, 0, innerWidth, innerHeight);
 
     particles.forEach(particle => {
